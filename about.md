@@ -1,5 +1,5 @@
 ## Welcome to Hang's Home
-![Image](avatar.jpg)
+![Image](images/demo/backgrounds/avatar.jpg)
 
 Hi everyone! My full name is Hang Thi Nguyen 🙌. 
 My major is Applied Mathematics and Informatics Technology at Hanoi University of Science and Technology.
