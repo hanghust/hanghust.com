@@ -72,6 +72,7 @@ label, input, textarea, select, button{display:block; resize:none; outline:none;
 label{margin-bottom:5px;}
 :required, :invalid{outline:none; box-shadow:none;}
 ::placeholder{opacity:1;}/* Makes sure the placeholder text is not transparent */
+img.cangiua {display: block; margin-left: auto; margin-right: auto;}
 
 
 /* Generalise

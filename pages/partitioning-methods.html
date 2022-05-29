@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--
+Template Name: Nocobot
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Cluster Analysis: Basic Concepts and Methods | Partitioning Methods For Cluster Analysis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><i class="fas fa-phone rgtspace-5"></i> +84 394 88xx xx</li>
+        <li><i class="far fa-envelope rgtspace-5"></i> hanghust98@gmail.com</li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+    <div class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+        <li id="searchform">
+          <div>
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Quick Search:</legend>
+                <input type="text" placeholder="Enter search term&hellip;">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="../index.html">Welcome to Hang's Home</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a class="drop" href="../data-mining.html">Data Mining</a>
+            <ul>
+              <!-- <li><a href="pages/gallery.html">Data Preprocessing</a></li>
+              <li><a href="pages/full-width.html">Data Warehousing and Online Analytical Processing</a></li>
+              <li><a href="pages/sidebar-left.html">Mining Frequent Patterns, Associations, and Correlations: Basic Concepts and Methods</a></li>
+              <li><a href="pages/sidebar-right.html">Advanced Pattern Mining</a></li>
+              <li><a href="pages/basic-grid.html">Classification: Basic Concepts</a></li>
+              <li><a href="pages/font-icons.html">Classification: Advanced Methods</a></li> -->
+              <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+              <!-- <li><a href="pages/font-icons.html">Advanced Cluster Analysis</a></li>
+              <li><a href="pages/font-icons.html">Outlier Detection</a></li>
+              <li><a href="pages/font-icons.html">Data Mining Trends and Research Frontiers</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="../deep-learning.html">Deep Learning</a>
+            <!-- <ul>
+              <li><a href="#">Level 2</a></li>
+              <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a href="../graph-neural-networks.html">Graph Neural Networks</a></li>
+          <li><a href="../stories.html">Stories</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading">Data Mining</h6>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../data-mining.html">Data Mining</a></li>
+        <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+        <li><a href="partitioning-methods.html">Partitioning Methods For Cluster Analysis</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="heading underline font-x2">Partitioning Methods For Cluster Analysis</p>
+    </div>
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h3>Hôm nay của bạn thế nào?</h3>
+      <p>Chào các bạn chào mừng các bạn trở lại với kênh vlog của mình 😂 
+        Một ngày của bạn hôm nay thế nào? Nếu là một ngày tuyệt vời thì 
+        hãy đọc bài xàm xí của mình để gấp đôi tuyệt vời nhé 💏 Còn nếu 
+        buồn thì càng nên đọc để bớt buồn đi nè 😇. Bài hôm trước mình 
+        đã giới thiệu qua về cluster analysis vậy hôm nay chúng ta cùng 
+        tìm hiểu một phương pháp phổ biến nhất trong cluster analysis nhé! <br>
+        <br>
+        <b>Partitioning methods</b> là phương pháp đơn giản và được sử dụng phổ biến nhất.
+        Cho một tập dữ liệu D gồm n objects, k - số cluster, partition algorithms
+        sẽ chia n object vào k cluster (k≤n). Khi đó các object được chia vào 
+        k-cluster sẽ đáp ứng điều kiện tương tự nhau trong cùng một cluster 
+        và không tương tự nhau nếu nằm trong hai cluster khác nhau 
+        (thường sự giống nhau “similar" được đo đếm dựa trên độ đo khoảng cách - có 
+        nhiều độ đo khoảng cách được sử dụng cho partitioning methods). <br>
+        <br>
+        Hai giải thuật partitioning phổ biến nhất là K-means và K-mediods.
+        <br><br>
+        <h3>K-means: A centroid-based technique</h3>
+        Đặt vấn đề: Cho tập D gồm n objects trong không gian euclidean. Chia D 
+        thành k-clusters: \(C_1, C_2, ... , C_k \)( k < n) trong đó \(C_i \subset D \), \(C_i \cap C_j = \empty \) ( 1≤ i, j ≤ k). <br>
+        <br>
+        Xây dựng một hàm mục tiêu f (objective function) nhằm mục đích cho độ 
+        tương đồng cao trong nội bộ cluster và độ tương đồng thấp giữa hai cluster bất kỳ.<br>
+        <br>
+        Centroid-based partitioning technique sử dụng centroid của cluster \(C_i\)
+        để đại diện cho cluster đó. Centroid được hiểu là điểm trung tâm 
+        của cluster và nó thường được xác định là mean hoặc mediod của tập 
+        dữ liệu (mean thì chắc mọi người đều biết rồi rồi mediod thì mọi người 
+        tự tìm hiểu nhé 😜). <br>
+        <br>
+        Vì mình xác định trong không gian euclidean nên độ đo dùng để đo lường 
+        sự tương đồng giữa các objects (hay points) là euclidean distance.<br><br>
+
+        Chất lượng cụm được đo lường đánh giá bằng một cost function, hàm cost function 
+        sử dụng là sum of squared error.<br>
+        \[E = \sum_{i=1}^k \sum_{p \in C_i} dist(p, c_i)^2 \]
+        Trong đó:
+        <ul>
+          <li>\(c_i\): centroid của cluster thứ i</li>
+          <li>p: điểm dữ liệu trong không gian d chiều được lấy từ tập D</li>
+        </ul>
+        Mục tiêu của object funtion là cố gắng trả về k-clusters với mong muốn k-clusters 
+        là các tập compact (càng tacts biệt càng tốt).<br><br>
+
+        Vậy vấn đề cần đưa ra là làm sao để tối ưu objective function??? Nó thực sự là 
+        một thách thức rất lơn đó ☹️ trong trường hợp tệ nhất chúng ta phải liệt kê 
+        các phân vùng theo cấp số nhân và kiểm tra giá trị biến thiên trong mỗi lần 
+        liệt kê. ⇒ Bài toán này là bài toán NP-khó  (xin là xin vĩnh biệt cụ 😰). 
+        Nếu dữ liệu cần phân làm k-clusters, dimention=d thì thời gian giải bài toán 
+        \(O(n^{dk+1} logn)\).
+        
+        Lan man một hồi thì cũng chưa ra vấn đề gì cả 🤟 vậy túm cái quần lại 
+        thì k-means hoạt động như thế nào 🤭.<br><br>
+        
+        <b>Các bước xử lý k-means clustering:</b><br>
+        
+        Bước 1: Chọn random k-points làm centroid cho k-clusters từ n_points.<br>
+        
+        Bước 2: Mỗi object sẽ được gán vào một cluster mà nó tương tự với centroid của 
+        cluster đó nhất. Và độ đo sự tương đồng là dựa vào khoảng cách euclidean giữa 
+        nó và centroid của cluster nó được phân.<br>
+        
+        Bước 3: Cái thiện objective function (tối ưu hóa hàm mục tiêu - chính là tối 
+        ưu hóa hàm cost function được định nghĩa ở trên).
+        Cập nhật lại centroid của mỗi cluster bằng mean value ⇒ lặp lại bước 2<br>
+        
+        Điệu kiện dừng:<br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;         Cách 1: Cost function < threshold (thường không được dùng)<br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;         Cách 2: Các cluster không đổi sau khi cập nhật và tính toán phân cụm lại<br>
+        <img src="cluster-basic-image\partitioning-method-images\Untitled.png", class="cangiua"><br>
+        Nhìn vào hoạt động của K-means bạn có thấy điều gì đặc biệt cần chú ý không? <br> 
+        <img src="cluster-basic-image\partitioning-method-images\Untitled1.png", class="cangiua"><br>
+        Nếu không có gì cần chú ý hoặc thấy nó hoàn hảo thì bạn có thể bê nó đi 
+        và dùng ngay được rồi 😉 Còn nếu bạn có cùng suy nghĩ vấn đề giống 
+        như mình thì chúng ta sẽ đi tiếp 🙏.<br><br>
+        <h3>k-Medoids: A Representative Object-Based Technique</h3>
+        Nhược điểm của K-means là rất nhạy cảm với outlier. Lý do K-means nhạy cảm với outlier là gì??? 
+        Làm thế nào để giảm bớt ảnh hưởng của outlier lên model?<br><br>
+
+        Yes! Chính nó thay vì chúng ta tính mean value để xác định centroid 
+        của cluster vậy tại sao chúng ta không dùng dữ liệu thực tế làm centroid 🥲. <br><br>
+
+        Hàm cost function được sử dụng trong thuật toán này: absolute-error criterion
+        \[E = \sum_{i=1}^k \sum_{p \in C_i} dist(p, o_i) \]
+        Trong đó: 
+        <ul>
+          <li>E: gọi là tiêu chuẩn lỗi tuyệt đối</li>
+          <li>\(o_i\): là điểm đại diện cho cluster</li>
+        </ul>
+        Mấy cái thay đổi nho nhỏ này so với K-means đã tạo ra K-medoids 
+        giải quyết vấn đề outlier tương đối tốt mà vẫn dễ hiểu như K-means vậy 😎. 
+        (Tuy nhiên thì nó vẫn là bài toán NP-khó thôi ⇒ dữ liệu mà lớn thì kết quả 
+        cũng không quá tốt đâu, độ phức tạp tính toán cũng sẽ phức tạp hơn k-means).<br><br>
+        <b>Partitioning Around Medoids (PAM) Algorithm</b> là giải thuật phổ biến đuộc sử dụng trong K-medoids.<br>
+
+        <b>Các bước xử lý K-medoids clustering:</b><br>
+        
+        Bước 1: Chọn random k-points làm đại diện cho k-clusters từ n_points. (người ta gọi những điểm này là seed).  ^^ <br>
+        
+        Bước 2: Repeat.<br>
+        <ul>
+          <li>Từ k-points ta xây dựng k-clusters với các điểm 
+            tương tự điểm đại diện nhất (cơ chế giống K-means 
+            hôi). ^_^</li>
+          <li>Chọn random một điểm không phải điểm đại diện 
+            trong tập dữ liệu làm điểm đại diện tạm thời \(c_i\)
+            với hy vọng là điểm đại diện thay thế tốt cho điểm 
+            đại diện \(o_i\)  từ tập k-points.</li>
+          <li>Tính toán tổng cost S dùng để quyết định hoán đổi 
+            \(c_i\) với \(o_i\).</li>
+          <li>Nếu \(S < 0 \) thì hoán đổi \(c_i \) cho \(o_i\),  S≥0 giữ nguyên \(o_i\).</li>
+        </ul>
+        Bước 3: Tiêu chí hội tụ (tương tự như K-means)<br><br>
+        
+        Độ phức tạp tính toán:\(O(k(n-k)^2)\)<br>
+        <img src="cluster-basic-image\partitioning-method-images\Untitled2.png", class="cangiua"><br>
+        <img src="cluster-basic-image\partitioning-method-images\Untitled3.png", class="cangiua"><br>
+        Cả k-means và k-mediods (PAM) đều làm việc không tốt trên dữ liệu lớn 
+        ⇒ Vậy có giải pháp nào thay thế để giải thuật có thể làm 
+        tốt trên dữ liệu lớn không?<br><br>
+        Đó là lý do <b>Clustering LARge Applications (CLARA)</b>
+        được tìm thấy để phần nào giải quyết vấn đề này. 
+        Thay vì nó xử lý trên toàn bộ dữ liệu như k-means 
+        và k-mediods (PAM) thì nó sẽ sử dụng random sample 
+        trên tập dữ liệu. Sau đó trên mỗi mẫu sẽ sử dụng PAM để 
+        phân cụm. (Vấn đề chọn mẫu như thế nào để có thể đại diện 
+        cho toàn bộ tập dữ liệu cũng là một thách thức không nhỏ 
+        cho thuật toán này - trong nhiều trường hợp, một mẫu lớn 
+        hoạt động tốt nếu nó được tạo ra để mỗi object có xác suất 
+        được chọn vào mẫu là bằng nhau). CLARA xây dựng các nhóm từ 
+        nhiều random samples và trả lại nhóm tốt nhất làm đầu ra.<br><br>
+
+        Độ phức tạp tính toán: /(O(ks^2+k(n-k))/)<br>
+
+        Trong đó: s là size của sample, k số cluster, n tổng dữ liệu.<br><br>
+
+        Chú ý: Hiệu quả của CLARA phụ thuộc vào chất lượng random sample. 
+        Do đó nhược điểm to đùng của CALRA là tính toán trên random sample 
+        thay vì trên toàn bộ dữ liệu như PAM vì vậy, nếu tập mẫu bị lệch 
+        và không đại diện tốt cho toàn bộ dữ liệu thì kết quả phân cụm có 
+        thể là cực kỳ tồi.<br>
+
+        How might we improve the quality and scalability of CLARA?<br>
+        <b>Clustering Large Applications based upon RANdomized Search (CLARANS ):</b>
+        nó đại diện cho việc đánh đổi giữa chi phí và hiểu quả sử dụng samples để 
+        đạt được kết quả phân cụm tốt<br><br>
+
+        Đầu tiên nó sẽ chọn random k objects trong tập dữ liệu làm 
+        mediods. Sau đó nó sẽ chọn một mediod hiện tại x và một 
+        điểm không phải mediod y. Có thể thay thế x bằng y nếu 
+        absolute-error không được cải thiện. CLARANS sẽ thực hiện 
+        tìm kiếm như vậy l lần. Bộ mediods sau l lần tìm kiếm được 
+        gọi là local optimum. CLARANS sẽ lặp lại điều này m lần và 
+        trả về local optimal như kết quả cuối cùng.<br>
+        <img src="cluster-basic-image\partitioning-method-images\Untitled4.png", class="cangiua"><br>
+        Thuật toán yêu cầu numlocal (số lần lặp để giải quyết vấn đề), 
+        maxneighbor (số lân cận tối đa được kiểm tra) và không 
+        được kiểm tra của các cụm được tạo thành (k) làm đầu vào.<br>
+
+        Sau đó, bắt đầu lặp lại, i được đặt thành 1, trước đó 
+        mincost (là chi phí tối ưu) được đặt thành vô hạn và 
+        bestnode (medoids tối ưu) được đặt thành bộ giá trị 
+        trống.<br>
+
+        Bây giờ k điểm dữ liệu ngẫu nhiên được chọn làm medoid 
+        hiện tại và các cụm được hình thành bằng cách sử dụng 
+        các điểm dữ liệu này (Khoảng cách Euclid có thể được 
+        sử dụng để tìm medoid gần nhất để tạo thành cụm).<br>
+
+        Sau khi vòng lặp mới này bắt đầu, trong đó j được đặt 
+        thành 1. Một medoid hiện tại được chọn ngẫu nhiên và 
+        một điểm dữ liệu mediod tạm thời ngẫu nhiên (hàng xóm 
+        ngẫu nhiên) được chọn để thay thế bằng medoid hiện tại. 
+        Nếu việc thay thế điểm dữ liệu mediod tạm thời mang lại 
+        TotalCost thấp hơn so với TotalCost của mediod hiện tại 
+        thì việc thay thế sẽ được thực hiện. Nếu việc thay thế 
+        được thực hiện thì j không được tăng lên, ngược lại 
+        j = j +1.<br>
+
+        Khi j> maxneighbor, thì các medoid hiện tại được lấy 
+        và Tổng chi phí của chúng được so sánh với mincost. 
+        Nếu TotalCost nhỏ hơn mincost, thì Bestnode được cập 
+        nhật dưới dạng medoid hiện tại.<br>
+
+        i được tăng dần sau đó và nếu nó lớn hơn numlocal, 
+        thì Bestnode được đưa ra làm đầu ra, nếu không thì 
+        toàn bộ quá trình sẽ được lặp lại.<br>
+
+        <b>Cuối cùng chúng ta so sánh một chút về partitioning methods nhé:</b><br>
+        <img src="cluster-basic-image\partitioning-method-images\Untitled5.png", class="cangiua"><br>
+         
+      </p>
+      <p>Vậy là chúng ta đã tìm hiểu được phần đầu tiên về partitioning methods😘. Hẹn các bạn trong bài viết tới về hierarchical methods nha 🙈.
+      </p>
+      <hr>
+      
+      <!-- <p>Math can be inline like \(2^{2x}=4\), or displayed like:</p>
+      \[2^{3x}=8\] -->
+      
+      <div class="scrollable">
+        <h1>References</h1>
+        <div class="indented"><figure id="e89667e6-5d36-4ab6-a2e3-c72d4bd8f7e4">
+        <div class="source"><a href="https://www.youtube.com/watch?v=GApaAnGx3Fw&amp;ab_channel=OmarSobh">Partition Based Clustering 04 - The K Medoids Clustering Method</a></div></figure>
+        <p id="dd347535-df92-4957-a3ee-9218fc66cd2a" class="">
+        <a href="https://medium.com/analytics-vidhya/partitional-clustering-using-clarans-method-with-python-example-545dd84e58b4">Partitional Clustering using CLARANS Method with Python Example</a></p>
+        <div class="source"><a href="https://core.ac.uk/download/pdf/231160447.pdf">Advanced Methods to Improve Performance of K-Means
+          Algorithm: A Review</a></div></figure>
+        <figure id="aa1e1178-2c6e-43f2-adb2-c49c85b3a7c1"><div class="source">
+          <a href="Cluster%20analysis%20cu%CC%9B%CC%A3c%20thu%CC%81%20vi%CC%A3!%20329c1b36917f49f19a420509062036f1/Jiawei_Han_Micheline_Kamber_Jian_Pei_Data_Minib-ok.xyz.pdf">
+            Data Mining Concepts and Techniques</a></div></figure>
+            <p id="3baef8f5-6531-4f44-83cf-4f4f1c8d184b" class="">
+        </p></div><p id="2f6ba6cf-9ea7-4ada-98cb-0de67ec6e7f1" class="">
+      </div>
+
+      
+      <hr>
+      <div class="clearfix">
+
+          
+        <a class="btn btn-primary float-left" href="cluster-cuc-thu-vi.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Data Mining">← Previous<span class="d-none d-md-inline">
+            Post</span></a>
+        
+        
+        <a class="btn btn-primary float-right" href="hierarchical-methods.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partitioning methods">Next<span class="d-none d-md-inline">
+            Post</span> →</a>
+        
+
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="ctdetails" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace clear">
+      <li class="one_quarter first">
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a Call:</strong> +84 394 88XX XX</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send me a mail:</strong> hanghust98@mail.com</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Monday - Saturday:</strong> 08.00am - 18.00pm</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="https://hanghust.github.io">our location</a></span></div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

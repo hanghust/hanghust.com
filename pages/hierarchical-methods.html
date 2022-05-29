@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--
+Template Name: Nocobot
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Cluster Analysis: Basic Concepts and Methods | Hierarchical Methods For Cluster Analysis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><i class="fas fa-phone rgtspace-5"></i> +84 394 88xx xx</li>
+        <li><i class="far fa-envelope rgtspace-5"></i> hanghust98@gmail.com</li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+    <div class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+        <li id="searchform">
+          <div>
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Quick Search:</legend>
+                <input type="text" placeholder="Enter search term&hellip;">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="../index.html">Welcome to Hang's Home</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a class="drop" href="../data-mining.html">Data Mining</a>
+            <ul>
+              <!-- <li><a href="pages/gallery.html">Data Preprocessing</a></li>
+              <li><a href="pages/full-width.html">Data Warehousing and Online Analytical Processing</a></li>
+              <li><a href="pages/sidebar-left.html">Mining Frequent Patterns, Associations, and Correlations: Basic Concepts and Methods</a></li>
+              <li><a href="pages/sidebar-right.html">Advanced Pattern Mining</a></li>
+              <li><a href="pages/basic-grid.html">Classification: Basic Concepts</a></li>
+              <li><a href="pages/font-icons.html">Classification: Advanced Methods</a></li> -->
+              <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+              <!-- <li><a href="pages/font-icons.html">Advanced Cluster Analysis</a></li>
+              <li><a href="pages/font-icons.html">Outlier Detection</a></li>
+              <li><a href="pages/font-icons.html">Data Mining Trends and Research Frontiers</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="../deep-learning.html">Deep Learning</a>
+            <!-- <ul>
+              <li><a href="#">Level 2</a></li>
+              <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a href="../graph-neural-networks.html">Graph Neural Networks</a></li>
+          <li><a href="../stories.html">Stories</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading">Data Mining</h6>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../data-mining.html">Data Mining</a></li>
+        <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+        <li><a href="hierarchical-methods.html">Hierarchical Methods For Cluster Analysis</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="heading underline font-x2">Hierarchical Methods For Cluster Analysis</p>
+    </div>
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <b> Đu idol mệt quá thì về đây với mình :v</b>
+      <p>Trong bài viết trước mình đã nói về <a href="partitioning-methods.html">Partitioning Methods For Cluster Analysis</a> 
+        Trong khi Partitioning methods đáp ứng yêu cầu phân cụm dữ liệu thành các nhóm riêng biệt, thì trong một vài tình huống, 
+        chúng ta sẽ yêu cầu phân cụm dữ liệu theo các cấp độ khác nhau, giống như một hệ thống phân cấp thứ bậc. 
+        (Tương tự như một tree vậy)<br><br>
+
+        Giống như việc tổ chức một công ty, thì danh sách, cấp bậc nhân viên cũng được coi là một hệ thống phân cấp 
+        (có chứa tư tưởng Hierarchical Methods). Hierarchical Methods đặc biệt có ích trong việc sử dụng để data 
+        visualization.<br><br>
+        Hình dưới đây thể hiện phân cụm các dòng xe và có sự phân cấp loại xe theo từng dòng lớn:<br>
+
+        <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled3.png", class="cangiua"><br>
+        
+        Một hướng khá là hứa hẹn là kết hợp hierarchical với kỹ thuật phân cụm khác để tạo thành multiple-phase. Dưới đây là hai model multiple-phase.<br>
+        
+        - BIRCH: sử dụng cấu trúc tree để phân cụm.<br>
+        - Chameleon: Mở rộng cho dynamic modeling.<br><br>
+        
+        Có một số cách để phân loại hierarchical methos: Algorithmic methods, probabilistic methods, bayesian methods.<br>
+        
+        Agglomerative, divisive, multiphase là algorithmic methods. Nghĩa là chúng ta xem xét dữ liệu như deterministic và tính toán cluster dựa trên khoảng cách.<br>
+        <h3>Agglomerative versus Divisive Hierarchical Clustering</h3>
+        Hierarchical clustering có thể là agglomerative hoặc divsive phụ thuộc vào việc sử dụng chiến lược 
+        bottom-up (merge) hay top-down (spliting).<br><br>
+
+        <b>Agglomerative hierarchical clustering method:</b> sử dụng chiến lược bottom-up. 
+        Bắt đầu nó sẽ chia objects thành các cluster nhỏ sau đó lặp đi lặp lại việc merge các 
+        cluster thành các cluster lớn hơn cho đến khi toàn bộ objects cùng thuộc một cluster hoặc 
+        thỏa mãn một điều kiện dừng nào đó. Cluster chứa toàn bộ objects được gọi là root. 
+        Trong bước merge thuật toán sẽ tìm ra hai cluster giống nhau nhất để merge thành một cluster 
+        (similar measure).<br><br>
+
+        <b>Divisive hierarchical clustering method:</b> sử dụng chiến lược top-down. Nó bắt đầu từ một 
+        cluster chứa toàn bộ object gọi là root. Sau đó nó sẽ đệ quy việc chia nhỏ cluster thành các 
+        cluster nhỏ hơn cho đến khi đạt được điều kiện dừng hoặc đến level thấp nhất (tức mỗi cluster 
+        chỉ chứa duy nhất một object).<br><br>
+
+        Thường thì điều kiện dừng của Agglomerative và Divisive là số lượng cụm được chỉ định.<br>
+
+        <b>Dưới đây ví dụ mô tả:</b> 
+
+        <b>AGNES (AGglomerative NESting) và DIANA (DIvisive ANAlysis)</b>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled.png", class="cangiua"><br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled1.png", class="cangiua"><br>
+        Chúng ta nhắc đế khá nhiều độ tương tự giữa hai cluster, Vậy độ tương tự giữa hai cluster được tính toán như thế nào?<br>
+        <h3>Distance Measures in Algorithmic Methods</h3>
+        Dù sử dụng agglomerative method hay divisive method thì cốt lõi của nó cũng cần đo khoảng cách 
+        giữa hai cluster. Có 4 độ đo khoảng cách thông dụng nhất sử dụng:<br>
+
+        Trong đó:<br>
+
+        - \(p \in C_i \text{ , } p' \in C_j\)<br>
+        - \(|p-p'|\): là khoảng cách giữa hai object \(p, p'\)<br>
+        - \(m_i\) :  Là mean point của cluster \(C_i\)<br>
+        - \(n_i:\)  Là số objects của cluster \(C_i\)<br><br>
+
+        <b>Minimum distance:</b> \(dist_{min}(C_i, C_j) = \min_{p \in C_i, p' \in C_j} {|p-p'|}\)<br><br>
+
+        <b>Maximum distance:</b>  \(dist_{max}(C_i, C_j) = \max_{p \in C_i, p' \in C_j} {|p-p'|}\)<br><br>
+
+        <b>Mean distance:</b> \(dist_{mean}(C_i, C_j) = {|m_i-m_j|}\)<br><br>
+
+        <b>Average distance:</b> \(dist_{avg}(C_i, C_j) = \frac{1}{n_in_j}\sum_{p \in C_i, p' \in C_j} {|p-p'|}\)<br><br>
+
+        Algorithm sử dụng minimum distance được gọi là nearest - neighbor clustering algorithm. 
+        Hơn nữa nếu quá trình phân cụm kết thúc dựa trên khoảng cách gần nhất giữa hai cluster 
+        gần nhất lớn hơn threshold người dùng đặt ra thì gọi là single-linkage algorithm. Nếu coi 
+        dữ liệu như một node trong graph, edges là các đường đi giữa hai node trong một cluster thì 
+        khi merge hai cluster \(C_i, C_j\) với nhau ta chỉ cần thêm một cạnh giữa hai node gần nhất 
+        của hai cluster. (Đây còn được gọi là tree, giữa hai node chỉ có duy nhất một được đi). 
+        Agglomerative sử dụng minimum distance hay còn gọi là minimal spanning tree algorithm. <br><br>
+
+        Algorithm sử dụng maximum distance được gọi là farthest - neighbor clustering algorithm. 
+        Hơn nữa nếu quá trình phân cụm kết thúc dựa trên khoảng cách xa nhất giữa  hai cluster 
+        gần nhất lớn hơn threshold người dùng đặt ra thì gọi là complete-linkage algorithm. 
+        Mỗi một cluster là compete subgraph.<br><br>
+
+        Tuy nhiên minimum distance hay maximum distance nhạy cảm với outlier hoặc noise do đó chúng 
+        ta có thể xem xét sử dụng mean distance hoặc average distance. Tuy nhiên mean distance sẽ 
+        được ưu tiên hơn vì dễ dàng tính toán hơn. Còn với average distance khi tính toán cho 
+        categorical thì sẽ rất phức tạp hoặc không khả thi để xác định.<br><br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled2.png", class="cangiua"><br>
+        <a href="https://online.stat.psu.edu/stat555/node/86/">Example: Agglomerative Hierarchical Clustering</a>
+      </p>
+      <h3>BIRCH: Balanced Iterative Reducing and Clustering using Hierarchies (Multiphase Hierarchical Clustering Using Clustering Feature Trees)</h3>
+          BIRCH được thiết kế cho phân cụm dữ liệu lớn. Nó giải quyết hai vấn đề lớn của các thuật toán phân 
+          cụm đã nêu trước đây:<br>
+      <ul>
+        - Không có khả năng mở rộng (xử lý trên dữ liệu lớn) - scalability (Cái này chắc dễ hiểu rồi nha 🥲)<br>
+        - Không có khả năng hoàn tác những gì đã được thực hiện trong bước trước. (Như các thuật toán trước 
+        đây đã tìm hiểu như K-means, K-medoids, etc thì trong quá trình phân cụm nếu có sự cố xảy ra 
+        (thiếu tài nguyên xử lý) thì ngay lập tức quá trình phân cụm sẽ chết, trong khi đó với Birch ta có 
+        cơ chế xử lý các trường hợp thiếu tài nguyên này và hơn nữa khi dữ liệu đã duyệt trước đó cũng sẽ 
+        không cần duyệt lại lần nữa 😊<br>
+      </ul>
+      <img src="cluster-basic-image\hierarchical-methods-images\Untitled3.png", class="cangiua"><br>
+        ⇒ Cấu trúc CF tree cho phép khả năng lưu trữ giảm đáng kể, tốc độ xử lý phân cụm cũng nhanh hơn. 
+        Điều này cho phép phân cụm trên một lượng dữ liệu lớn hay thậm chí là stream database. 
+        (linh động với dynamic data).<br><br>
+
+        Xem xét n objects, d-dimentional. Clustering feature (CF) là một vector 3-D được định nghĩa như sau: 
+        \(CF = \text{<}n, LS, SS>\)<br>
+
+        Trong đó: <br>
+      <ul>
+
+        <li>n: Số lượng objects</li>
+
+        <li>\(LS = \sum_{i=1}^nx_i\)</li>
+
+        <li>\(SS = \sum_{i=1}^n x_i^2\)</li>
+      </ul>
+        Custering feature về cơ bản là một tóm tắt các số liệu thống kê đại diện cho cluster đã cho.<br>
+        Chúng ta có thể dễ dàng thu được nhiều số liệu thống kê hữu ích của một cụm. Ví dụ, centroid cluster:
+        x0, radius R và  diameter D được xác định như sau:<br>
+
+        \[x_0 = \frac{\sum_{i=1}^nx_i}{n} = \frac{LS}{n}\]
+        \[R = \sqrt{\frac{\sum_{i=1}^n(x_i-x_0)^2}{n}} = \sqrt{\frac{nSS-2LS^2+nLS}{n^2}}\]
+        \[D = \sqrt{\frac{\sum_{i=1}^n\sum_{j=1}^n(x_i-x_j)^2}{n(n-1)}} = \sqrt{\frac{2nSS-2LS^2}{n(n-1)}}\]
+
+        Trong đó: 
+        <ul>
+        - R: khoảng cách trung bình từ các objects thành viên tới centroid của cụm <br>
+        - D: khoảng cách trung bình theo cặp trong cùng một cluster.<br>
+        - R, D đều phản ánh độ chặt chẽ của các thành phần trong cluster xung quanh centroid.<br>
+      </ul>
+        Tóm tắt một cluster sử dụng clustering feature có thể tránh việc lưu trữ thông tin quá chi tiết 
+        cho từng objects (points). Thay vì lưu từng object, chúng ta chỉ một không gian nhớ nhỏ hơn và 
+        chỉ lưu clustering feature. Đây chính là chìa khóa để BIRCH hoạt động hiệu quả trên dữ liệu lớn. 
+        Hơn nữa, việc merge hai cluster tương đối đơn giản với clustering feature: Ví dụ chúng ta có hai 
+        cluster \(C_1, C_2\) và clustering feature tương ứng:<br>
+
+        \[CF1 = \text{<}n_1, LS_1, SS_1>\]
+        \[CF2 = \text{<}n_2, LS_2, SS_2>\] 
+        Việc merge hai cluster \(C_1, C_2\) chính là tính toán lại clustering feature.<br>
+
+        \[CF_{merge} = \text{<}n_1+n_2, LS_1+LS_2, SS_1+SS_2>\]
+
+        Một CF-tree có hai tham số quan trọng cần quan tâm:<br>
+        <ul>
+            <b>Branching factor-B:</b> số lượng nút con tối đa ở mỗi internal node .<br>
+
+            <b>Threshold-T:</b> maximum diameter D của subclusters được lưu trữ tại leaf node.<br>
+        </ul>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled4.png", class="cangiua"><br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled5.png", class="cangiua"><br>
+        Ngoài ra, tất cả các leaf node sẽ có hai con trỏ là con trỏ trước và con trỏ kế tiếp, điều này cho 
+        phép tất cả chuỗi leaf node được liên kết với nhau và dễ dàng quét.<br>
+
+        <b>Insertion Algorithm:</b><br>
+        <ul>
+            <b>Step 1:</b> Xác định leaf phù hợp: Bắt đầu từ root, sau đó đệ quy chọn child node gần nhất để nạp vào CF-entry (theo độ đo euclidean).<br>
+            
+            <b>Step 2:</b> Biến đổi leaf: khi đến một leaf node, tìm điểm dữ liệu hoặc subcluster gần 
+            nhất với leaf node sau đó kiểm tra khả năng nó có thể thêm vào leaf-node mà không vượt 
+            ngưỡng T cho phép. Nếu thỏa mãn, thêm nó vào CF entry, ngược lại tạo CF-entry mới. 
+            Trong trường hợp không đủ không gian tạo CF-entry mới, chúng ta sẽ merge các CF-entry 
+            lại để tạo thêm không gian lưu trữ. Cơ chế chọn nhánh đại diện dựa trên khoảng cách xa 
+            nhất của các CF-entry sau đó phân phối lại CF-entry.<br>
+            
+            <b>Step 3:</b> Cập nhật thay đổi đường dẫn đến leaf: Sau khi thêm thông tin CF-entry, 
+            chúng ta cần cập nhật lại thông tin cho mỗi internal node (parent node). Chúng ta lặp 
+            lại step1 →  step3 cho đến khi duyệt hết dữ liệu.<br>
+        </ul>
+        <b>Example:</b><br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled6.png", class="cangiua"><br>
+        <b>BIRCH là multiphase clustering technique: </b><br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled7.png", class="cangiua"><br>
+        Phase 1: BIRCH bắt đầu với việc khởi tạo threshold value và sau đó quét database để xây dựng 
+        CF-tree trong bộ nhớ ban đầu. Nếu trong quá trình chạy bị out of memory trước khi kết thúc 
+        quá trình quét database, nó sẽ tăng threshold value và build lại CF-tree mới, CF-tree mới 
+        nhỏ hơn CF-tree cũ và nó cũng sẽ thêm lại các node lá từ CF-tree cũ vào CF-tree mới. 
+        Sau đó toàn bộ node lá của CF-tree cũ  sẽ được thêm lại, quá trình quét database sẽ 
+        được tiếp tục. Việc chọn được threshold lý tưởng sẽ rút ngắn quá trình build lại CF-tree. 
+        Tuy nhiên việc khởi tạo threshold quá cao thì CF-tree được khởi tạo sẽ không đầy đủ thông tin, 
+        dẫn đến kết quả phân cụm sẽ tồi. Có thể xem như là nén dữ liệu và cố gắng bảo toàn cấu trúc phân 
+        cụm vốn có của dữ liệu.<br>
+        <img src="cluster-basic-image\hierarchical-methods-images\Untitled8.png", class="cangiua"><br>
+        Theo tuỳ chọn, chúng ta có thể dành ra một lượng disk space để xử lý outlers. Outliers là node 
+        lá dữ liệu có mật độ vô cùng thưa thớt và không quan trọng để đại diện cho pattern chung 
+        của cluster. Khi chúng ta xây lại CF-tree từ CF-tree cũ thì size của CF-tree sẽ giảm theo 
+        hai cách:<br>
+        <ul>
+            - Đầu tiên, chúng ta sẽ tăng threshold value, do đó mỗi node sẽ nạp thêm points.<br>
+            - Thứ 2, Chúng ta sẽ coi một số node lá là outlier data, và loại bỏ chúng ra khỏi CF-tree. 
+            Một node cũ được xem là outlier data nếu nó có ít dữ liệu hơn mức trung bình.<br>
+      </ul>
+        Phase 2: BIRCH áp dụng một cluster algorithm để phân cụm node lá của CF-tree, loại bỏ cluster 
+        thưa thớt (coi các cluster này như outlier) và nhóm những cluster gần nhau thành một cluster 
+        lớn hơn.<br>
+        <ul>
+            - Cho rằng các thuật toán phân cụm nhất định hoạt động tốt nhất khi số lượng objects nằm 
+            trong một phạm vi nhất định, chúng ta có thể nhóm các cụm con đông đúc thành các nhóm lớn 
+            hơn dẫn đến tổng thể CF-tree nhỏ hơn.<br>
+            - Hầu hết mọi thuật toán phân cụm đều có thể được điều chỉnh để phân loại các clustering 
+            feature thay vì các điểm dữ liệu. Ví dụ: chúng ta có thể sử dụng KMEANS để phân loại 
+            dữ liệu của mình, đồng thời thu được lợi ích từ BIRCH (tức là giảm thiểu các hoạt động I / O).<br>
+            - Cho đến nay, mặc dù CF-tree có thể đã được xây dựng lại nhiều lần, nhưng dữ liệu gốc chỉ được 
+            quét một lần. Phase 2 liên quan đến việc chuyển thêm dữ liệu để sửa những điểm không chính xác 
+            gây ra bởi thực tế là thuật toán phân cụm được áp dụng cho một bản tóm tắt của dữ liệu. 
+            Phase 2 cũng cung cấp cho chúng ta tùy chọn loại bỏ các ngoại lệ<br>
+        </ul>
+
+        "BIRCH hiệu quả như thế nào?" Độ phức tạp thời gian của thuật toán là O (n), trong đó n là số 
+        lượng objects được phân nhóm. Các thử nghiệm đã cho thấy khả năng mở rộng tuyến tính của thuật 
+        toán liên quan đến số lượng objects và chất lượng phân nhóm tốt của dữ liệu. 
+        Tuy nhiên, vì mỗi node trong CF-tree chỉ có thể chứa một số lượng giới hạn do kích thước của nó, 
+        một node của CF-tree không phải lúc nào cũng phản ánh đúng thông tin của một cụm 
+        (mất mát thông tin nén). Hơn nữa, nếu các cụm không có dạng hình cầu, BIRCH không hoạt 
+        động tốt vì nó sử dụng khái niệm bán kính hoặc đường kính để kiểm soát ranh giới của một cụm. 
+        Các ý tưởng về clustering feature và CF-tree đã được áp dụng ngoài BIRCH. Nhiều ý tưởng đã được 
+        nhiều người khác vay mượn để giải quyết các vấn đề về clustering streaming và dynamic data.<br>
+
+        
+
+      <h3>Chameleon: Multiphase Hierarchical Clustering Using Dynamic Modeling</h3>
+
+      <b>Limitations of Traditional Clustering Algorithm:</b><br>
+
+        Partition-based clustering techniques: K-means, K_mediod, Clarans, ... sẽ cố gắng tách dataset 
+        thành k cluster, thông thường các thuật toán này hoạt động dựa trên giả định rằng các cluster 
+        là một hyper-ellipsoidal và có kích thước tương tự nhau. Với những dữ liệu có phân phối như dưới 
+        đây thì khả năng phân tách của các thuật toán trên không quá hiệu quả:<br>
+
+      <img src="cluster-basic-image\hierarchical-methods-images\Untitled10.png", class="cangiua"><br>
+
+        Ngoài ra việc tiếp cận dựa trên một tiêu chí nào đó cũng sẽ có vấn đề:<br>
+
+      <img src="cluster-basic-image\hierarchical-methods-images\Untitled11.png", class="cangiua"><br>
+
+      <b>Chameleon:</b> là một dạng thuật toán agglomerative hierarchical clustering.<br>
+
+        Chameleon là thuật toán hierarchical clustering dử dụng dynamic modeling để xác định độ tương 
+        tự giữa các cluster. Trong chameleon, cluster similarity được đánh giá dựa trên:<br>
+      <ul>
+        - Các objects được kết nối với nhau tốt như thế nào trong một cluster.<br>
+        - Mức độ gần nhau giữa các cụm.<br>
+      </ul>
+
+        Nghĩa là, hai cluster được merge với nhau thành một cụm với nhau nếu sự liên kết giữa chúng cao, 
+        và chúng gần nhau, cách đánh giá này giựa trên đặc trưng nội bộ của chính các cluster đó. 
+        Do vậy, chameleon sẽ không phụ thuộc vào một mô hình tĩnh do người dùng cung cấp và có thể tự 
+        động thích ứng với các đặc tính bên trong của cụm đã merge. Chameleon sử dụng các tiếp cận 
+        k-nearest-neighbor graph để xây dựng graph riêng biệt. ở đó mỗi một đỉnh của graph sẽ đại diện 
+        cho một object (data item), và tồn tại cạnh liên kết giữa hai đỉnh nếu  một object nằm trong 
+        k-most similar object của object còn lại. Trọng số (độ dài của cạnh) phản chiếu độ tương tự giữa 
+        hai object (data item). Modeling data items dưới dạng graph rất phổ biến trong các giải thuật 
+        hierarchical.<br><br>
+
+      <b>KNN-Graph (k-nearest- neighbor-graph)</b><br>
+      <img src="cluster-basic-image\hierarchical-methods-images\Untitled12.png", class="cangiua"><br>
+
+      </ul>
+      Chameleon có hai pha: <br>
+      <ul>
+        - Phase 1: Chameleon sử dụng graph partitioning algorithm để phân vùng k-nearest-neighbor 
+        graph thành một số lượng lớn các subcluster (tối thiểu edge-cut).<br>
+        - Phase 2: Sau đó chameleon sử dụng thuật toán agglomerative hierarchical clustering 
+        để merge subcluster dựa trên độ tương tự của chúng thành. Để xác định cặp cluster tương 
+        tự nó ta xét cả tính liên kết và mức độ gần nhau giữa các cụm.<br>
+      </ul>
+      <img src="cluster-basic-image\hierarchical-methods-images\Untitled13.png", class="cangiua"><br>
+
+      Chameleon sử dụng một dynamic modeling framework để xác định độ tương tự giữa hai cluster dựa 
+      trên relative interconnectivity \(RI(C_i, C_j)\) và relative closeness \(RC(C_i, C_j)\). 
+      Chameleon sẽ lựa chọn hai cluster để merge nếu cả hai chỉ số RI và RC cao. <br>
+      <ul>
+      - Relative interconnectivity: \(RI(C_i, C_j)\) giữa hai cluster \(C_i, C_j\) 
+      được định nghĩa như sự liên kết tuyệt đối giữa cluster \(C_i, C_j\).   
+      (Đại diện cho mức độ liên kết nội bộ của cluster).<br>
+          
+            \[RI(C_i, C_j) = \frac{|EC_{\{C_i, C_j\}}|}{\frac{1}{2}(|EC_{C_i}|+|EC_{C_j}|}\]
+          
+          Trong đó:<br>
+          <ul>
+          - \(EC_{C_i, C_j}\) là tổng trọng số của edge-cut cho cluster chứa cả \(C_i, C_j\) (chính là cạnh nối giữa hai cluster \(C_i , C_j\).<br>
+          - \(EC_{C_i}, EC_{C_j}\)  tương ứng là tổng trọng số của edge-cut của cụm \(C_i \text{( or } C_j)\), các edge-cut chia cụm \(C_i \text{( or } C_j)\) thành hai phần tách biệt.<br>
+          </ul>
+      - Relative closeness \(RC(C_i, C_j)\) giữa hai cluster \(C_i, C_j\) là mức độ gần nhau tuyệt 
+      đối giữa hai cluster \(C_i, C_j\).<br>
+          
+            \[RC(C_i, C_j) = \frac{\overline{S_{EC(C_i, C_j)}}}{\frac{|C_i|}{|C_i|+|C_j|}\overline{S_{EC_{C_i}}} +  \frac{|C_j|}{|C_i|+|C_j|}\overline{S_{EC_{C_j}}}}\]
+          Trong đó:<br>
+          <ul>
+          - \(\overline{S_{EC(C_i, C_j)}}\) : là trọng số trung bình của các cạnh nối hai đỉnh \(C_i, C_j\)<br>
+          - \(\bar{S_{EC_{C_i}}} (\bar{S_{EC_{C_j}}})\): là trọng số trung bình của cạnh nếu chúng ta 
+          chia \(C_i \text{( or } C_j)\) làm hai phần.<br><br>
+          </ul>
+        </ul>
+      Sử dụng Hierarchical Agglomerative Clustering để merge các sub-cluster:<br>
+      <ul>
+      - Cách 1: Định nghĩa RI Threshold và RC Threshold:<br>
+        <ul>
+          - Mỗi cluster sẽ tìm một cluster liền kề có cả hai chỉ số RC và RI vượt quá threshold đặt ra.<br>
+          - Merge tất cả các cluster đã được xác định (connecting k-nearest neighbors)<br>
+          - Lặp lại<br>
+        </ul>
+      - Cách 2 (better): Xây dựng một công thức tổng hợp hàm mục tiêu: 
+      <b>maximizing</ul>b> \(RI(C_i, C_j)* RC(C_i, C_j)^\alpha\). Trong đó \(\alpha\)
+          là một thông số cho phép chúng ta điều chỉnh tùy chọn các thông số 
+          \(RI(C_i, C_j) , RC(C_i, C_j)\). Nếu \(\alpha > 1\) thì \(RC(C_i, C_j)\)  có tầm quan trọng 
+          cao hơn \(RI(C_i, C_j)\) và ngược lại nếu \(\alpha < 1\) thì \(RC(C_i, C_j)\)  
+           có tầm quan trọng hơn \(RI(C_i, C_j)\).
+      </ul>
+        <p>Tạm thời đến đây thôi nhé ^_^ 🥰</p>
+      <hr>
+
+      <h1>References</h1>
+      <div class="scrollable">
+        <a href=" https://medium.com/@noel.cs21/balanced-iterative-reducing-and-clustering-using-heirachies-birch-5680adffaa58">BALANCED ITERATIVE REDUCING AND CLUSTERING USING HEIRARCHIES(BIRCH)</a><br><br>
+        <a href="https://www.javatpoint.com/birch-in-data-mining">BIRCH in Data Mining - Javatpoint</a><br><br>
+        <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.330.8806&rep=rep1&type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.330.8806&rep=rep1&type=pdf</a><br><br>
+        <a href="https://analyticsindiamag.com/guide-to-birch-clustering-algorithmwith-python-codes/#:~:text=BIRCH%20clustering%20algorithm%20is%20provided,other%20cluster%20algorithms%20like%20AgglomerativeClustering">BIRCH clustering algorithm is provided,other cluster algorithms like AgglomerativeClustering</a><br><br>
+        
+      </div>
+
+      <hr>
+      <div class="clearfix">
+
+          
+        <a class="btn btn-primary float-left" href="partitioning-methods.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Data Mining">← Previous<span class="d-none d-md-inline">
+            Post</span></a>
+        
+        
+        <a class="btn btn-primary float-right" href="birch-algorithm.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partitioning methods">Next<span class="d-none d-md-inline">
+            Post</span> →</a>
+        
+
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="ctdetails" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace clear">
+      <li class="one_quarter first">
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a Call:</strong> +84 394 88XX XX</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send me a mail:</strong> hanghust98@mail.com</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Monday - Saturday:</strong> 08.00am - 18.00pm</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="https://hanghust.github.io">our location</a></span></div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

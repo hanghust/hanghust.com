@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--
+Template Name: Nocobot
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Cluster Analysis: Basic Concepts and Methods | Cluster Analysis Cực Thú vị!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><i class="fas fa-phone rgtspace-5"></i> +84 394 88xx xx</li>
+        <li><i class="far fa-envelope rgtspace-5"></i> hanghust98@gmail.com</li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+    <div class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+        <li id="searchform">
+          <div>
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Quick Search:</legend>
+                <input type="text" placeholder="Enter search term&hellip;">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="../index.html">Welcome to Hang's Home</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a class="drop" href="index.html">Data Mining</a>
+            <ul>
+              <!-- <li><a href="pages/gallery.html">Data Preprocessing</a></li>
+              <li><a href="pages/full-width.html">Data Warehousing and Online Analytical Processing</a></li>
+              <li><a href="pages/sidebar-left.html">Mining Frequent Patterns, Associations, and Correlations: Basic Concepts and Methods</a></li>
+              <li><a href="pages/sidebar-right.html">Advanced Pattern Mining</a></li>
+              <li><a href="pages/basic-grid.html">Classification: Basic Concepts</a></li>
+              <li><a href="pages/font-icons.html">Classification: Advanced Methods</a></li> -->
+              <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+              <!-- <li><a href="pages/font-icons.html">Advanced Cluster Analysis</a></li>
+              <li><a href="pages/font-icons.html">Outlier Detection</a></li>
+              <li><a href="pages/font-icons.html">Data Mining Trends and Research Frontiers</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="../deep-learning.html">Deep Learning</a>
+            <!-- <ul>
+              <li><a href="#">Level 2</a></li>
+              <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a href="../graph-neural-networks.html">Graph Neural Networks</a></li>
+          <li><a href="../stories.html">Stories</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading">Data Mining</h6>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../data-mining.html">Data Mining</a></li>
+        <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+        <li><a href="cluster-cuc-thu-vi.html">Cluster Analysis Cực thú vị!</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="heading underline font-x2">Cluster Analysis Cực Thú vị!</p>
+    </div>
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h3> Đôi lời xàm xí của mình nè :)</h3>
+      <p>Mình đã bắt đầu tìm hiểu về machine learning từ cuối năm 2019 đầu năm 2020. Cái lúc bắt đầu xác 
+        định cho mình một con đường đi và cố vớt vát điểm số trên trường cho đỡ bết bát (tưởng bị cảnh 
+        cáo đến nơi rồi 🙂). Và model đầu tiên mình tiếp xúc chẳng phải linear classifier hay logistic 
+        regression đâu mà chính là nó k-means ✌️ Kaka cơ mà mình chỉ dùng mấy cái thư viện ăn sẵn sklearn 
+        như nấu mì ăn liền khi đói vậy nên chả hiểu cơ chế hoạt động của nó như thế nào 😂. 
+        Nhân ngày mưa gió mình khui lại mấy cái lý thuyết liên quan nhưng thấy nó đồ sộ ra phết 😇. 
+        Uk thì bắt tay vào tìm hiểu thôi nào:)))</p>
+      <h3>Cluster Analysis là gì?</h3>
+      <p>Cluster analysis hay clustering là quá trình phân cụm một tập dữ liệu hay các quan sát thành các 
+        tập dữ liệu nhỏ. Mỗi tập dữ liệu nhỏ này đươc gọi là một cụm (cluster), các object trong cùng một 
+        cụm sẽ tương tự nhau và các object không cùng một cụm sẽ khác nhau. Câu hỏi đặt ra như thế nào là 
+        tương tự nhau và như thế nào là không tương tự nhau? <br>
+        Ví dụ nhé 😎 : Một người phụ nữ sinh ra 3 đứa trẻ và mọi người đều nói có một đứa trẻ trông khác
+        hai đứa còn lại và cả 3 đứa trẻ đều không giống mẹ. Rồi thình lình xuất hiện hai ông người yêu của
+        bà mẹ. Sau quan sát một hồi thì có hai đứa trẻ ngũ quan gương mặt giống hệt người đàn ông A 
+        (centroid 1) và đứa trẻ còn lại giống người đàn ông B (centroid 2) ⇒ chẳng cần xét nghiệm cũng ra 
+        kết quả rồi 😉 (Thế là có người có cặp sừng dài vài mét òi 😑). <br>
+        <br>
+
+        Ví dụ trên là một minh họa cho clustering trong đó hai người đàn ông được coi là centroid tương 
+        ứng của hai cluster và ngũ quan trên gương mặt được coi feature để xác định độ tương đồng giữa 
+        các object. <br>
+        <br>
+        
+        Cluster analysis được sử dụng rộng rãi và ứng dụng trong buisness intelligence, image pattern 
+        recognition, web search, biology, security. Trong business intelligence, clustering có thể được 
+        sử dụng để phân nhóm khách hàng, ở đây khách hàng trong cùng một nhóm sẽ chia sẻ những đặc trưng 
+        tương đồng mạnh mẽ. Điều này tạo điều kiện để phát triển chiến lược kinh doanh phù hợp cho từng 
+        nhóm khách hàng, nâng cao quản lý quan hệ khách hàng,.... Hay trong image pattern recognition, 
+        clustering cũng có thể được dùng để xác định các cluster hay subclass. Ví dụ như trong bài toán 
+        phân lớp chữ số viết tay thì thay vì sử dụng các thuật toán model cao siêu thì cluster cũng có 
+        thể dữa vào các đường nét hoặc mảng màu để xác định độ tương đồng giữa các bức ảnh để đưa ra kết 
+        quả phân cụm. Nó cũng được ứng dụng trong web search, khi người dùng search một keyword nào đó 
+        thì hệ thống sẽ trả về một loạt các kết quả khớp với keyword (số lượng trả về là cực kỳ đồ sộ). 
+        Khi đó việc ứng dụng cluster để gom nhóm, tổ chức lại kết quả và hiển thị kết quả theo nhóm là một 
+        giải pháp tốt để đưa ra những nhóm kết quả tốt cho người dùng.... <br>
+        <br>
+        
+        Ngoài ra clustering được coi như một data mining function, nó được sử dụng như một tool đọc lập 
+        để phân tích hiểu sâu về phân phối của dữ liệu quan sát đặc trưng của dữ liễu trong mỗi cụm. 
+        Ngoài ra nó có thể sử dùng như bước tiền xử lý cho các bài toán khác (attribute subset selection, 
+        and classification). Clustering có thể được gọi với cái tên khác như automatic classification hay 
+        data segmentation. Nó cũng có thể được dùng cho việc xử lý outlier. <br>
+        <br>
+        
+        Như một nhánh trong statistics, clustering được học một cách chuyên sâu, mục tiêu tập trung vào 
+        “distance-based cluster analysis”. Các thuật toán clustering như kmeans, k-medoids, ... được xây 
+        dựng dựa trên statistical analysis hay một số software package hoặc systems như S-Plus, SPSS hay 
+        SAS cũng dựa trên statistical analysis. <br>
+        <br>
+        
+        Trong machine learning thì cluster analysis được phân vào nhóm unsupervised learning. Lan man một 
+        hồi thế rồi thì mình đi đào sâu hơn một tý xem cluster analysis có gì nhé 😊</p>
+      <h1>Overview of Basic Clustering Methods</h1>
+      <div class="scrollable">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>General Characteristics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="partitioning-methods.html">Partitioning methods</a></td>
+              <td>
+                <li>Tìm các cluster có dữ liệu phân bố dạng hình cầu</li>
+                <li>Dựa trên độ đo khoảng cách</li>
+                <li>Có thể sử dụng mean hoặc medoid ... để đại diện cho tâm của cụm</li>
+                <li>Hiệu quả với các tập dữ liệu có kích thước vừa và nhỏ</li>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="hierachical-methods.html"></a>Hierarchical methods</td>
+              <td>
+                <li>Phân cụm dữ liệu theo thứ bậc (nhiều cấp độ)</li>
+                <li>Không thể sửa lỗi merge hoặc split cluster bị sai</li>
+                <li>Có khả năng kết hợp các kỹ thuật khác như microclustering hoặc "linkages"</li>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="Density-based-medthods.html"></a>Density-based medthods</td>
+              <td>
+                <li>Tìm các cluster có dữ liệu phân bố theo hình dạng tùy ý. Các cluster là các vùng dữ liệu tập trung dày đặc cạnh nhau trong
+                  không gian được ngăn cách bởi các vùng dữ liệu có mật độ thấp. </li>
+                <li>Mật độ cluster: Mỗi diểm dữ liệu phải có số điểm tối thiểu trong "vùng lân cận" của nó.</li>
+                <li>Có thể lọc ra các outlier data.</li>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="grid-based-methods.html">Grid-based methods</a></td>
+              <td>
+                <li>Sử dụng cấu trúc dữ liệu dạng grid</li>
+                <li>Thời gian xử lý nhanh (thường không phụ thuộc vào số lượng dữ liệu nhưng phụ thuộc vào kích thước grid)</li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Mình vừa giới thiệu qua về một số ứng dụng, bài toán sử dụng cluster analysis và nêu ra một số phương pháp 
+         cơ bản được sử dụng trong cluster analysis. Các bạn đã hiểu hơ về nó chưa? Chúc các bạn một ngày tràn đầy năng
+         lượng nhé 😘. Hẹn các bạn trong bài viết tới về partitioning methods nha 🙈.
+      </p>
+      <hr>
+      <div class="clearfix">
+
+          
+        <a class="btn btn-primary float-left" href="../data-mining.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Data Mining">← Previous<span class="d-none d-md-inline">
+            Post</span></a>
+        
+        
+        <a class="btn btn-primary float-right" href="partitioning-methods.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partitioning methods">Next<span class="d-none d-md-inline">
+            Post</span> →</a>
+        
+
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="ctdetails" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace clear">
+      <li class="one_quarter first">
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a Call:</strong> +84 394 88XX XX</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send me a mail:</strong> hanghust98@mail.com</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Monday - Saturday:</strong> 08.00am - 18.00pm</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="https://hanghust.github.io">our location</a></span></div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

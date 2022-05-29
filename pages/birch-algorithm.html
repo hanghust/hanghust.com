@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+Template Name: Nocobot
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Cluster Analysis: Basic Concepts and Methods | BIRCH: Balanced Iterative Reducing and Clustering</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><i class="fas fa-phone rgtspace-5"></i> +84 394 88xx xx</li>
+        <li><i class="far fa-envelope rgtspace-5"></i> hanghust98@gmail.com</li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+    <div class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+        <li id="searchform">
+          <div>
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Quick Search:</legend>
+                <input type="text" placeholder="Enter search term&hellip;">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="../index.html">Welcome to Hang's Home</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a class="drop" href="../data-mining.html">Data Mining</a>
+            <ul>
+              <!-- <li><a href="pages/gallery.html">Data Preprocessing</a></li>
+              <li><a href="pages/full-width.html">Data Warehousing and Online Analytical Processing</a></li>
+              <li><a href="pages/sidebar-left.html">Mining Frequent Patterns, Associations, and Correlations: Basic Concepts and Methods</a></li>
+              <li><a href="pages/sidebar-right.html">Advanced Pattern Mining</a></li>
+              <li><a href="pages/basic-grid.html">Classification: Basic Concepts</a></li>
+              <li><a href="pages/font-icons.html">Classification: Advanced Methods</a></li> -->
+              <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+              <!-- <li><a href="pages/font-icons.html">Advanced Cluster Analysis</a></li>
+              <li><a href="pages/font-icons.html">Outlier Detection</a></li>
+              <li><a href="pages/font-icons.html">Data Mining Trends and Research Frontiers</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="../deep-learning.html">Deep Learning</a>
+            <!-- <ul>
+              <li><a href="#">Level 2</a></li>
+              <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a href="../graph-neural-networks.html">Graph Neural Networks</a></li>
+          <li><a href="../stories.html">Stories</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading">Data Mining</h6>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../data-mining.html">Data Mining</a></li>
+        <li><a href="cluster-basic.html">Cluster Analysis: Basic Concepts and Methods</a></li>
+        <li><a href="birch-algorithm.html">BIRCH: Balanced Iterative Reducing and Clustering using Hierarchies (Multiphase Hierarchical Clustering Using Clustering Feature Trees)</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="heading underline font-x2">BIRCH: Balanced Iterative Reducing and Clustering using Hierarchies (Multiphase Hierarchical Clustering Using Clustering Feature Trees)</p>
+    </div>
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h3> Cảm xúc cao trào part 1 :))</h3>
+      <p>Mình đang học cách viết lách trình bày cho dễ hiểu 😊 thế là hăng hái làm bài seminar cơ mà fail ngay 
+        từ bước trình bày nên quyết tâm làm lại cho bớt fail một tẹo✌️.
+
+        Chả là ngồi lướt cả buổi sáng mới tìm được một bộ dữ liệu hay hay về thu nhập và điểm chi tiêu
+        👉 dữ liệu vui thôi nên không mấy ý nghĩa nhé 😂<br>
+        <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled.png", class="cangiua"><br>
+        Giải thích qua một chút về các column trong tập dữ liệu:<br>
+
+        - CustomerID: Chỉ số định danh một khách hàng<br>
+        - Gender: Giới tính của khách hàng<br>
+        - Age: Tuổi của khách hàng<br>
+        - Annual Income (k\(): Thu nhập bình quân hàng năm (nghìn đô)<br>
+        - Spending Score (1-100): Điểm số tiêu dùng<br><br>
+        👉 Bây giờ mình muốn dựa vào hai thông số "AnnualIncome, SpendingScore"
+         để phân nhóm khách hàng này thành các nhóm có những điểm tương tự nhau cả về thu nhập vẫn điểm tiêu dùng 
+         Ví dụ như kiếm nhiều tiêu nhiều, kiếm ít tiêu ít, hay kiếm ít tiêu nhiều (giống mình nè 😄).... 
+         Vậy bạn sẽ sử dụng thuật toán nào để giải quyết câu hỏi này????<br><br>
+
+        <b>Ting Ting</b> ⇒ Chính xác chúng ta sẽ nghĩ ngay đến Clustering Analysis. Có tương đối nhiều methods để giải quyết bài toán cluster:<br>
+        <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled1.png", class="cangiua"><br>
+        👉 Thông thường khi giải quyết bài toán chúng ta nên lựa chọn những thuật toán đơn giản mà hiệu quả 🤔 
+        và với bài toán cluster thì K-means là thuật toán nhảy số đầu tiên trong đầu mình. Nhưng vấn đề là:<br>
+
+        - Giả sử nhé: Mình sẽ coi tập dữ liệu này là gạo và tài nguyên dùng để xử lý, lưu trữ dữ liệu này là một cái bao. 
+        Nếu gạo có thể chứa hết trong bao thì quá là bình thường rồi ⇒ giờ chỉ cần chọn thuật toán phù hợp và 
+        triển thôi nhưng nếu như bao gạo không thể chứa hết số gạo đó thì sao? 🙌 Ngiền gạo thành bột rồi bỏ 
+        vào bao thôi ✌️ <br>
+        <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled2.png", class="cangiua"><br>
+        ⇒ Chính xác là nén dữ liệu lại thành dữ liệu nhỏ hơn và sau đó mới thực thi phân cụm. Hôm nay mình 
+        sẽ giới thiệu thuật toán Birch: Balanced Iterative Reducing and Clustering using Hierarchies 
+        (Multiphase Hierarchical Clustering Using Clustering Feature Trees) dựa trên ý tưởng nén dự liệu 
+        và sau đó sử dung các thuật toán đã có để giải quyết phân cụm - Birch có hai pha chính do đó nó 
+        được coi là thuật toán Miltiphase.
+
+        Các bạn đọc lại về hierarchical methods ở đây nha 😘 <a href="hierarchical-methods.html">Hierarchical Methods For Cluster Analysis</a><br><br>
+        BIRCH được thiết kế cho phân cụm dữ liệu lớn. Nó giải quyết hai vấn đề lớn của các thuật toán phân 
+        cụm đã nêu trước đây:<br>
+
+        - Không có khả năng mở rộng (xử lý trên dữ liệu lớn) - scalability (Cái này chắc dễ hiểu rồi nha 🥲)<br>
+        - Không có khả năng hoàn tác những gì đã được thực hiện trong bước trước. (Như các thuật toán trước 
+        đây đã tìm hiểu như K-means, K-medoids, etc thì trong quá trình phân cụm nếu có sự cố xảy ra 
+        (thiếu tài nguyên xử lý) thì ngay lập tức quá trình phân cụm sẽ chết, trong khi đó với Birch ta có 
+        cơ chế xử lý các trường hợp thiếu tài nguyên này và hơn nữa khi dữ liệu đã duyệt trước đó cũng sẽ 
+        không cần duyệt lại lần nữa 😊<br>
+      <h3>Birch Architecture</h3>
+
+      BIRCH sử dụng clustering feature (CF) để tóm tắt thông tin cụm và clustering feature tree 
+      (CF-tree) để đại diện cho clustering hierarchical. Nói thuật ngữ chuyên ngành thì nó màu mè 
+      vậy thôi nhưng thực tế thì chính là nén dữ liệu theo một quy luật nhất định để dễ dàng nắm 
+      bắt thông tin cũng như quan hệ của dữ liệu thôi 😘. Tuy nhiên cũng sẽ có nhược điểm khi nén 
+      dữ liệu rồi đó là mất mát thông tin nhưng trong điều kiện hạn chế tài nguyên thì việc mất mát 
+      thông tin (trong phạm vi cho phép) là chấp nhận được hoặc muốn giảm thời gian tính toán 
+      (Đây cũng là lý do kết quả phân cụm của Birch không quá tốt và không phù hợp với những dữ liệu 
+      phức tạp, đa chiều).<br><br>
+
+      Mình ví dụ một chút về <b>clustering feature tree</b> nhé:<br>
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled4.png", class="cangiua"><br>
+
+      Một CF-tree có hai tham số quan trọng cần quan tâm:<br>
+      <ul>
+      <b>Branching factor-B:</b> số lượng nút con tối đa ở mỗi internal node.<br>
+
+      <b>Threshold-T:</b> maximum diameter D của subclusters được lưu trữ tại leaf node 
+      (diameter: được định nghĩa là khoảng cách lớn nhất của hai node bất kỳ trong graph).<br>
+      </ul>
+
+      Xem xét thành phần cấu tạo nên CF-tree là CF-feature ta có: xét n objects trong cluster thứ a, 
+      và đặt trong không gian euclicdean với d-dimentional khi đó Clustering feature (CF) 
+      là một vector 3-D được định nghĩa như sau: <br>
+      \[CF = \text{<}n, LS, SS>\]
+
+      Trong đó: <br>
+      <ul>
+
+              - n: Số lượng objects<br>
+
+              - \(LS = \sum_{i=1}^nx_i\) <br>
+
+              -\(SS = \sum_{i=1}^n x_i^2\)<br>
+
+              \(D  = \sqrt{\frac{2nSS-2LS^2}{n(n-1)}}\)<br>
+      </ul>
+
+      Áp dụng cho dữ liệu hay hay mà mình tìm được phía trên nhé:<br>
+
+      Nhìn qua phân phối của dữ liệu mà mình có: (vì demo đơn giản nên mình lấy tập dữ liệu nhỏ nhé 
+      khoảng 200 bản ghi hoi).<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled5.png", class="cangiua"><br>
+
+      👉 Đầu tiên coi dữ liệu là mỗi node trong graph (Cái này nói đơn giản là coi nó như lá của một cái cây vậy).
+       Trong lý thuyết đồ thị thì sẽ có một cái metrix trọng số lưu trọng số liên kết giữa các node này 
+       (trọng số này chính là một số dùng để đo độ gần nhau giữa hai node - thường thì là khoảng cách euclidean).<br>
+
+      👉 Okeee giờ thì mình xây dựng cái cây này thôi (Clustering feature tree):<br>
+
+      <b>Insertion Algorithm:</b><br>
+      <ul>
+      <b>Step 1:</b> Xác định leaf phù hợp: Bắt đầu từ root, sau đó đệ quy chọn child node gần nhất để 
+      nạp vào CF-entry (theo độ đo euclidean).<br>
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled6.png", class="cangiua"><br>
+
+
+      <b>Step 2:</b> Biến đổi leaf: khi đến một leaf node, tìm điểm dữ liệu hoặc subcluster gần nhất với leaf node sau đó kiểm tra khả năng nó có thể thêm vào leaf-node mà D không vượt ngưỡng T cho phép. Nếu thỏa mãn, thêm nó vào CF entry:<br>
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled7.png", class="cangiua"><br>
+
+      Ngược lại tạo CF-entry mới:<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled8.png", class="cangiua"><br>
+
+      Trong trường hợp không đủ không gian tạo CF-entry mới, chúng ta sẽ merge các CF-entry lại để tạo thêm không 
+      gian lưu trữ. Cơ chế chọn nhánh đại diện dựa trên khoảng cách xa nhất của các CF-entry sau đó phân 
+      phối lại CF-entry.<br><br>
+
+      Ví dụ: B=3<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled9.png", class="cangiua"><br>
+
+      Do B=3 mà tại LN1 B=4>3 nên ta cần tách LN1:<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled10.png", class="cangiua"><br>
+
+      <b>Step 3:</b> Cập nhật thay đổi đường dẫn đến leaf: Sau khi thêm thông tin CF-entry, 
+      chúng ta cần cập nhật lại thông tin cho mỗi internal node (parent node). Chúng ta lặp 
+      lại step1 →  step 3 cho đến khi duyệt hết dữ liệu.<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled11.png", class="cangiua"><br>
+
+      <b>Example:</b><br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled12.png", class="cangiua"><br>
+
+    </ul>
+      👉 Sau khi xây dựng được CF-tree thì chúng ta chỉ cần lựa chọn một thuật toán phân cụm 
+      phù hợp như: K-means, K-medoids, PAM, etc để thực hiện phân cụm trên CF-tree. <br>
+
+      👉 Sklearn fixed cố định thuật toán Agglomerative Clustering (Hierachical clustering) 
+      để thực hiện phân cụm. (không có parameter để thay đổi thuật toán phân cụm).<br>
+
+      <b>Code Example using Sklearn:</b><br>
+      -----------------------------Code------------------------------<br>
+      #BIRCH<br>
+      import matplotlib.pyplot as plt<br>
+      from sklearn.cluster import Birch<br>
+      # Creating the BIRCH clustering model<br>
+
+      # Birch in sklearn using Agglomerative clustering <br>
+      model = Birch(branching_factor =30, n_clusters = 5, threshold = 2.5)<br>
+      # Fit the data (Training)<br>
+
+      model.fit(X)<br>
+      # Predict the same data<br>
+
+      pred = model.predict(X)<br>
+      -----------------------------End------------------------------<br>
+
+      <b>Result:</b><br>
+
+      Ps: Mình chưa tìm thấy code để show CF-tree 🥲<br>
+
+      Còn dưới đây là kết quả phân cụm của Birch:<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled13.png", class="cangiua"><br>
+
+      Kết quả phân cụm khi sử dụng K-Means:<br>
+
+      <img src="cluster-basic-image\BIRCH Balanced-Iterative-Reducing-and-Clustering\Untitled14.png", class="cangiua"><br>
+
+      Để hiểu chi tiết hơn về thuật toán Birch hay một số thuật toán Partitioning Methods thì các bạn 
+      có thể đọc thêm tài liệu ở references nhớ!<br><br>
+
+      <h3>Summary</h3>
+
+      Túm cái quần lại thì chúng ta cần nắm được 4 ý chính sau:<br>
+      <ul>
+
+      - Khi cần cluster cho một bộ dữ liệu lớn mà có sự hạn chế về mặt tài nguyên và muốn tăng 
+      tốc thời gian xử lý, kiểu dữ liệu là numerical và số chiều ít (thông thường < 5) 
+      thì chúng ta có thể nghĩ ngay đến <b>Birch.</b><br>
+      - Nhược điểm lớn nhất của <b>Birch</b> là khi nén dữ liệu rồi đó là mất mát thông 
+      tin dẫn đến kết quả phân cụm của <b>Birch</b> không quá tốt và không phù hợp với 
+      những dữ liệu phức tạp, đa chiều.<br>
+      - Ý tưởng chủ đạo của Birch là:<br>
+        <ul>
+          - Nén dữ liệu: Bằng cách xây dựng một CF-tree theo một cấu trúc đặc biệt để có thể dễ 
+          dàng duyệt, lưu trữ và phân cụm.<br>
+          - Phân cụm: Sau khi thu được CF-tree thì lựa chọn thuật toán phân cụm để phân 
+          cụm các node của CF-tree và update kết quả phân cụm cho dữ liệu ban đầu.<br>
+        </ul>
+        </ul>
+      </p>
+      <hr>
+      <h1>References</h1>
+      <div class="scrollable">
+      <a href="cluster-cuc-thu-vi.html">Cluster analysis cực thú vị!</a><br><br>
+      <a href="partitioning-methods.html">Partitioning Methods For Cluster Analysis</a><br><br>
+      <a href="hierarchical-methods.html">Hierachical Methods For Cluster Analysis</a><br><br>
+     
+      </div>
+
+      <div class="clearfix">
+
+          
+        <a class="btn btn-primary float-left" href="hierarchical-methods.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Data Mining">← Previous<span class="d-none d-md-inline">
+            Post</span></a>
+        
+        
+        <a class="btn btn-primary float-right" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partitioning methods">Next<span class="d-none d-md-inline">
+            Post</span> →</a>
+        
+
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="ctdetails" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="nospace clear">
+      <li class="one_quarter first">
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a Call:</strong> +84 394 88XX XX</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send me a mail:</strong> hanghust98@mail.com</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Monday - Saturday:</strong> 08.00am - 18.00pm</span></div>
+      </li>
+      <li class="one_quarter">
+        <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come visit us:</strong> Directions to <a href="https://hanghust.github.io">our location</a></span></div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
